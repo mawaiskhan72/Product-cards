@@ -23,11 +23,23 @@ function ProductCards() {
   }, []);
 
   return (
-<div  className='bg-[#002e25]'>
+<div  className='bg-[#002e25] w-[100%] flex'>
 
+<slider className="text-white w-[20%] pt-6 px-6 bg-[#d1d5db]">
+  <div className='fixed w-[15%]'>
+  <div className="flex flex-col gap-2">
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">All</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Laptop</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Smartphones</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Fragrance</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Skincare</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Groceries</button>
+  <button className="px-3 py-2 rounded-md bg-[#673ee6] text-white">Home decoration</button>
+</div>
+</div>
+</slider>
 
-
-<div className='grid gap-4 px-6 grid-cols-4'>
+<div className='w-[80%] grid gap-4 px-6 grid-cols-3'>
   {products.length > 0 ? (
     products.map((product, index) => (
       
@@ -36,7 +48,7 @@ function ProductCards() {
         <div className='flex flex-col gap-2'>
           <button className='bg-[#008060] hover:bg-[#21b18d] text-white px-2 py-1 rounded-md '>{product.title}</button>
           <button className='bg-[#008060] hover:bg-[#21b18d] text-white rounded-md'>Price: ${product.price}</button>
-          <p className='text-justify px-2 py-1 rounded-md text-white'>{product.description}</p>
+          <button className='text-justify px-2 py-1 rounded-md text-white'>{product.description}</button>
           <button className='bg-[#008060] hover:bg-[#21b18d] text-white rounded-md'>{product.category}</button>
           <button className='bg-black hover:bg-[#121213] text-white px-2 py-2'>Add  to Cart</button>
         </div>
@@ -44,7 +56,7 @@ function ProductCards() {
       </div>
     ))
   ) : (
-    <p>No products available</p>
+    <button>No products available</button>
   )}
 </div>
 
