@@ -7,10 +7,7 @@ export default function App() {
   return (
     <div className="sticky z-10 top-0 flex justify-between bg-white py-4 px-6">
       <div className="flex items-center gap-4">
-        <h2 className="text-black font-bold">Products</h2>
-        <a href="#" className="text-black">Features</a>
-        <a href="#" className="text-black">Customers</a>
-        <a href="#" className="text-black">Integrations</a>
+        <h1 className="text-black font-bold text-[20px]">Products Store</h1>
       </div>
       <div className="flex items-center gap-4">
         <a href="#" className="hidden lg:flex text-black">Login</a>
@@ -22,3 +19,4 @@ export default function App() {
     </div>
   );
 }
+  
